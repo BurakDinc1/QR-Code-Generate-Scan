@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_qr_code" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="@string/qr_code_scanner_generator"
+                android:textColor="@color/beyaz"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <android.widget.Button
+            android:id="@+id/scanActivityBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:background="@drawable/round_button"
+            android:text="Scan"
+            android:textColor="@color/beyaz" />
+
+        <android.widget.Button
+            android:id="@+id/generateActivityBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_button"
+            android:text="Generate"
+            android:textColor="@color/beyaz" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dnc_software"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="QR Code - DNC Software"
+        android:textColor="@color/beyaz"
+        android:layout_margin="16dp"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

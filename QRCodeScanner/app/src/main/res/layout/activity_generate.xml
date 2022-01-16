@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".GenerateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dfg"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/generateback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/round_button"
+            android:padding="16dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:text="Back"
+            android:textColor="@color/beyaz"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dfg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="casual"
+                android:textStyle="bold"
+                android:text="Result"
+                android:textColor="@color/beyaz"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/generateImage"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/beyaz"/>
+
+            <EditText
+                android:id="@+id/generateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/transparentcornerwhite"
+                android:gravity="start|center_vertical"
+                android:hint="Text or Link"
+                android:fontFamily="casual"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_text"
+                android:drawablePadding="16dp"
+                android:textColor="@color/beyaz"
+                android:textSize="12sp"
+                android:padding="16dp"
+                android:textColorHint="@color/acikbeyaz" />
+
+            <android.widget.Button
+                android:id="@+id/generateBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_button"
+                android:padding="16dp"
+                android:textSize="12sp"
+                android:fontFamily="casual"
+                android:textStyle="bold"
+                android:text="Generate"
+                android:textAllCaps="false"
+                android:textColor="@color/beyaz" />
+
+            <LinearLayout
+                android:id="@+id/visibleItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:visibility="gone"
+                android:layout_marginTop="16dp">
+
+                <android.widget.Button
+                    android:id="@+id/generateSave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button"
+                    android:padding="16dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="16dp"
+                    android:text="Save"
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/ic_save"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/beyaz" />
+
+                <android.widget.Button
+                    android:id="@+id/generateClear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button"
+                    android:padding="16dp"
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="Clear"
+                    android:drawableStart="@drawable/ic_clear"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/beyaz" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

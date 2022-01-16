@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    tools:context=".ScanActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/scanback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:text="Back"
+            android:textColor="@color/beyaz"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/scannerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6.5"
+            app:autoFocusButtonColor="@color/colorPrimary"
+            app:autoFocusButtonVisible="true"
+            app:flashButtonColor="@color/colorPrimary"
+            app:flashButtonVisible="true"
+            app:frameAspectRatioHeight="1"
+            app:frameAspectRatioWidth="1"
+            app:frameColor="@color/colorPrimary"
+            app:frameCornersRadius="0dp"
+            app:frameCornersSize="50dp"
+            app:frameSize="0.75"
+            app:frameThickness="2dp"
+            app:maskColor="@color/saydammaviton" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.5"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="Click Camera for New Scan"
+                android:textColor="@color/beyaz" />
+
+            <TextView
+                android:id="@+id/resulttext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Result..."
+                android:gravity="start|center_vertical"
+                android:drawableStart="@drawable/ic_text"
+                android:drawablePadding="16dp"
+                android:textSize="12sp"
+                android:fontFamily="casual"
+                android:textStyle="bold"
+                android:textIsSelectable="true"
+                android:textColorHint="@color/acikbeyaz"
+                android:textColor="@color/beyaz"
+                android:background="@drawable/transparentcornerwhite"
+                android:padding="16dp" />
+
+            <android.widget.Button
+                android:id="@+id/scanActivityBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:fontFamily="casual"
+                android:textStyle="bold"
+                android:drawableTop="@drawable/ic_explorer"
+                android:drawablePadding="16dp"
+                android:background="@drawable/round_button"
+                android:padding="16dp"
+                android:text="Go To Address"
+                android:textColor="@color/beyaz" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
